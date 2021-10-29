@@ -1,0 +1,27 @@
+# 指定运行端口
+server:
+  port: 8081
+info:
+  name: 服务注册1-8003
+  dis: 主要用于服务注册
+  phone: 110
+# 指定服务名称
+spring:
+  boot:
+    admin:
+      client:
+        url: http://172.17.150.176/adminserver
+        instance:
+          service-base-url: http://172.17.150.174:8003
+
+# 指定主机地址
+eureka:
+  instance:
+    hostname: server2
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      # 注册到另一个Eureka注册中心
+      defaultZone: http://127.0.0.1:8002/eureka/
+
