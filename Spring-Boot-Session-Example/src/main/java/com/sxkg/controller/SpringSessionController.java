@@ -27,6 +27,19 @@ public class SpringSessionController {
 
 		return "index";
 	}
+	@GetMapping("/session")
+	public String homesession(Model model, HttpSession session) {
+		@SuppressWarnings("unchecked")
+		List<String> messages = (List<String>) session.getAttribute("MY_SESSION_MESSAGES");
+		
+		if (messages == null) {
+			messages = new ArrayList<>();
+		}
+		model.addAttribute("sessionMessages", messages);
+		model.addAttribute("sessionId", session.getId());
+		
+		return "index";
+	}
 
 	@PostMapping("/persistMessage")
 	public String persistMessage(@RequestParam("msg") String msg, HttpServletRequest request) {
@@ -38,7 +51,7 @@ public class SpringSessionController {
 		}
 		msgs.add(msg);
 		request.getSession().setAttribute("MY_SESSION_MESSAGES", msgs);
-		return "redirect:/";
+		return "redirect:/proxy/session-share/session";
 	}
 
 	@PostMapping("/destroy")

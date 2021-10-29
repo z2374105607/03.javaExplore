@@ -3,3 +3,4 @@ session client2：8081
 eureka server1： 8082 
 eureka server2： 8083
 zuul:8084
+cloud sso:8085
