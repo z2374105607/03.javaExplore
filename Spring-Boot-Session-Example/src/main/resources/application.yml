@@ -1,7 +1,13 @@
+server:
+  servlet:
+    session:
+      cookie:
+        # 防止cookie冲突，冲突会导致登录验证不通过
+        name: OAUTH2-CLIENT-SESSIONID
 spring:
   profiles: 
-    #active: server1
-    active: server2
+    active: server1
+    #active: server2
   application:
     name: session-share
   session: 
@@ -9,7 +15,9 @@ spring:
   redis:
     host: localhost
     port: 6379
-#logging.level.root=debug
+#logging:
+ #level:
+  #  root: debug
 eureka:
   client:
     register-with-eureka: true

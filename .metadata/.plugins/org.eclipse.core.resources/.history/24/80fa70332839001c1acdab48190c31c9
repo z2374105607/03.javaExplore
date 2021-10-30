@@ -1,0 +1,28 @@
+server:
+  port: 8085
+  #servlet:
+    #session:
+      #cookie:
+        # 防止cookie冲突，冲突会导致登录验证不通过
+       # name: OAUTH2-CLIENT-SESSIONID
+
+oauth2-service-url: http://localhost:9401
+
+spring:
+  application:
+    name: oauth2-client
+  #security:
+  # 与oauth2-server对应的配置
+    #oauth2:
+      #client:
+        #client-id: SpringCloudSSO
+        #client-secret: SpringCloudSSO123
+        #authorization-uri: http://auth.rebim.cn:9002/REBIM-SSO/auth/common/auth_init
+        #token-uri: http://auth.rebim.cn:9002/REBIM-SSO/auth/common/token
+        #scope: get_user_info
+        #authorization-grant-type: authorization_code
+        #user-authorization-uri: http://auth.rebim.cn:9002/REBIM-SSO/auth/common/auth_init
+        #access-token-uri: http://auth.rebim.cn:9002/REBIM-SSO/auth/common/token
+        #redirect-uri: http://localhost:8085/login/oauth2/code/callback
+        #user-name-attribute: userName
+        #userinfo-uri: http://auth.rebim.cn:9002/REBIM-SSO/auth/common/get_user_info

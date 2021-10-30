@@ -1,0 +1,24 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          sso-test:
+            client-id: SpringCloudSSO
+            client-secret: SpringCloudSSO123
+            client-name: SpringCloudSSO
+            provider: bimsso-oauth-provider
+            scope: get_user_info
+            redirect-uri: https://localhost:8085/sofa/login/oauth2/code/callback
+            client-authentication-method: basic
+            authorization-grant-type: authorization_code
+        provider:
+          bimsso-oauth-provider:
+            authorization-uri: http://auth.rebim.cn:9002/REBIM-SSO/auth/common/auth_init
+            token-uri: http://auth.rebim.cn:9002/REBIM-SSO/auth/common/token
+            userinfo-uri: http://auth.rebim.cn:9002/REBIM-SSO/auth/common/get_user_info
+
+            user-name-attribute: userName
+logging:
+  level:
+    root: INFO
