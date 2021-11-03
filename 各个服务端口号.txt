@@ -5,3 +5,4 @@ eureka server2： 8083
 zuul:8084
 cloud sso1:8085
 cloud sso2:8086
+cloud zuul sso1:8087

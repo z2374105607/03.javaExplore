@@ -1,0 +1,18 @@
+server:
+  port: 8085
+  servlet:
+    session:
+      cookie:
+        # 防止cookie冲突，冲突会导致登录验证不通过
+        name: OAUTH2-CLIENT-SESSIONID
+spring:
+  application:
+    name: oauth2-client
+  profiles: 
+    #active: server1
+    active: server2
+  session: 
+    store-type: redis
+  redis:
+    host: localhost
+    port: 6379

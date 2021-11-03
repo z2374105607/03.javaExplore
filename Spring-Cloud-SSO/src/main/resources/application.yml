@@ -1,5 +1,4 @@
 server:
-  port: 8085
   servlet:
     session:
       cookie:
@@ -9,8 +8,8 @@ spring:
   application:
     name: oauth2-client
   profiles: 
-    #active: server1
-    active: server2
+    active: server1
+    #active: server2
   session: 
     store-type: redis
   redis:

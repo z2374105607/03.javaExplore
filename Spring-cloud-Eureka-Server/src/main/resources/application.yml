@@ -1,8 +1,8 @@
 # 指定服务名称
 spring:
   profiles: 
-    #active: server1
-    active: server2
+    active: server1
+    #active: server2
   application:
     name: eureka-server
 

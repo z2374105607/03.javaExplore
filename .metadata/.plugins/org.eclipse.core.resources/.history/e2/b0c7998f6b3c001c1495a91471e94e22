@@ -1,0 +1,26 @@
+server:
+  servlet:
+    session:
+      cookie:
+        # 防止cookie冲突，冲突会导致登录验证不通过
+        name: OAUTH2-CLIENT-SESSIONID
+spring:
+  profiles: 
+    #active: server1
+    active: server2
+  application:
+    name: session-share
+  session: 
+    store-type: redis
+  redis:
+    host: localhost
+    port: 6379
+#logging:
+ #level:
+  #  root: debug
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8082/eureka/,http://localhost:8083/eureka/

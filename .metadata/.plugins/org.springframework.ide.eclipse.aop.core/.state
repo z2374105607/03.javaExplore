@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Spring-Cloud-Zuul"/>
+<aop-project name="Spring-Cloud-SSO"/>
+<aop-project name="Spring-Boot-Session-Example"/>
+</aop-reference-model>
