@@ -6,8 +6,8 @@ server:
         name: OAUTH2-CLIENT-SESSIONID
 spring:
   profiles: 
-    #active: server1
-    active: server2
+    active: server1
+    #active: server2
   application:
     name: session-share
   session: 
